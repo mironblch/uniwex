@@ -63,7 +63,7 @@ main {
     justify-content: space-between;
     align-items: flex-end;
     margin: 0 auto;
-    padding-top: 112px;
+    padding-top: 40px;
     max-width: 1650px;
 }
 
@@ -159,6 +159,8 @@ a:hover {
 }
 
 .section1-content {
+    display: flex;
+    flex-direction: column;
     column-gap: 95px;
     gap: 40px 0;
     width: 50%;
@@ -168,7 +170,6 @@ a:hover {
     font-weight: 400;
     font-size: 24px;
     max-width: 661px;
-    margin: 40px 0;
 }
 
 .section1-button {
@@ -193,16 +194,15 @@ a:hover {
     }
     .section1-content {
         column-gap: 0;
-        gap: 0;
+        gap: 15px;
         width: 100%;
-        margin: 0 0 20px;
     }
     .section1-content img {
         width: 170px;
     }
     .section1-content p {
         font-size: 16px;
-        margin: 15px 0;
+        margin: 0;
         width: 100%;
     }
     .section1-button {
@@ -215,12 +215,16 @@ a:hover {
 @media only screen and (750px < width < 969px) {
     .section1 {
         width: 100%;
-        margin: 70px 0;
+        margin: 50px 0;
     }
     .section1-button {
         height: 50px;
         width: 52%;
         font-size: 16px;
+    }
+    .section1-content {
+        column-gap: 0;
+        gap: 15px 0;
     }
     .section1::after{
         height: 471px;
@@ -230,14 +234,14 @@ a:hover {
     }
     .section1-content p {
         font-size: 16px;
-        margin: 20px 0;
+        margin: 0;
     }
 }
 /*ноутбук*/
 @media only screen and (970px < width < 1200px) {
     .section1 {
         width: 90%;
-        margin: 80px auto;
+        margin: 70px auto;
     }
 
     .section1::after {
@@ -247,6 +251,7 @@ a:hover {
 
     .section1-content {
         column-gap: 0;
+        gap: 30px 0;
     }
 
     .section1-content img {
@@ -254,9 +259,8 @@ a:hover {
     }
 
     .section1-content p {
-        font-size: 22px;
+        font-size: 18px;
         width: 100%;
-        margin: 30px 0;
     }
 
     .section1-button {
@@ -339,28 +343,30 @@ a:hover {
         width: 100%;
         flex-direction: column;
         justify-content: center;
+        gap: 15px;
     }
     .serviсe-img {
         flex-direction: column;
         width: 170px;
         margin-left: 0;
         margin-right: auto;
-        margin-bottom: 30px;
+        gap: 30px;
     }
     .serviсe-basic  {
-        margin: 0 auto;
+        margin: 0;
         width: 100%;
         font-size: 14px;
         flex-direction: column;
         justify-content: center;
+        gap: 15px;
     }
     .serviсe-basic > .column-1 {
         width: 100%;
-        column-gap: 15px;
+        gap: 15px;
     }
     .serviсe-basic > .column-2 {
         width: 100%;
-        column-gap: 15px;
+        gap: 15px;
     }
     .serviсe-basic > p::before {
         font-size: 36px;
@@ -369,7 +375,7 @@ a:hover {
 /*планшет*/
 @media only screen and (750px < width < 969px) {
     .conteiner1 {
-        margin: 70px 0;
+        margin: 50px 0;
         width: 100%;
         flex-direction: column;
         justify-content: center;
@@ -377,30 +383,23 @@ a:hover {
     .serviсe-img {
         flex-direction: column;
         width: 230px;
-        margin-left: 0;
         margin-right: auto;
-        margin-bottom: 50px;
+        margin-bottom: 30px;
     }
     .serviсe-basic  {
-        margin: 0 auto;
+        /*flex-direction: column;*/
         width: 100%;
         font-size: 16px;
-        flex-direction: row;
-        justify-content: center;
+        gap: 15px;
     }
     .serviсe-basic > .column-1 {
-        width: 50%;
-        column-gap: 20px;
+        width: 38%;
     }
     .serviсe-basic > .column-2 {
-        width: 50%;
-        column-gap: 20px;
-    }
-    .serviсe-basic > p {
-        margin-bottom: 15px;
+        width: 59%;
     }
     .serviсe-basic > p::before {
-        font-size: 54px;
+        font-size: 50px;
     }
 }
 /*ноутбук*/
@@ -421,6 +420,7 @@ a:hover {
 
     .serviсe-basic {
         margin: 0;
+        font-size: 16px;
     }
 
     .serviсe-basic > .column-1 {
@@ -452,12 +452,16 @@ a:hover {
 }
 
 .container2 > .group-1 {
+    display: flex;
+    flex-direction: column;
     text-align: right;
     width: 28%;
     gap: 10px;
 }
 
 .container2 > .group-2 {
+    display: flex;
+    flex-direction: column;
     text-align: left;
     width: 28%;
     gap: 10px;
@@ -547,6 +551,7 @@ a:hover {
         font-size: 14px;
         flex-direction: column;
         justify-content: center;
+        gap: 15px;
     }
     .container2 > p {
         gap: 15px;
@@ -567,18 +572,18 @@ a:hover {
     .group-1 > .text-3 > p {
         margin-left: auto;
     }
-    .group-1 > .text-1,
-    .group-1 > .text-2,
-    .group-1 > .text-3 {
-        margin-bottom: 15px;
-        /*margin-left: auto;*/
-    }
-    .group-2 > .text-4,
-    .group-2 > .text-5,
-    .group-2 > .text-6 {
-        margin-bottom: 15px;
-        margin-right: auto;
-    }
+    /*.group-1 > .text-1,*/
+    /*.group-1 > .text-2,*/
+    /*.group-1 > .text-3 {*/
+    /*    margin-bottom: 15px;*/
+    /*    !*margin-left: auto;*!*/
+    /*}*/
+    /*.group-2 > .text-4,*/
+    /*.group-2 > .text-5,*/
+    /*.group-2 > .text-6 {*/
+    /*    margin-bottom: 15px;*/
+    /*    margin-right: auto;*/
+    /*}*/
     .text-1 > p,
     .text-2 > p,
     .text-3 > p,
@@ -599,7 +604,7 @@ a:hover {
         color: #ffffff;
         text-align: center;
         width: 100%;
-        margin-bottom: 30px;
+        margin-bottom: 15px;
     }
 }
 /*планшет*/
@@ -608,11 +613,12 @@ a:hover {
     display: none;
     }
     .container2 {
-        margin: 70px 0;
-        width: 100%;
+        margin: 50px auto;
+        width: 690px;
         font-size: 16px;
         flex-direction: column;
-        /*justify-content: space-between;*/
+        gap: 15px;
+        /*justify-content: center;*/
     }
     .container2 > p {
         gap: 20px;
@@ -638,14 +644,14 @@ a:hover {
     .group-2 > .text-6 > p {
         margin-right: auto;
     }
-    .group-1 > .text-1,
-    .group-1 > .text-2,
-    .group-1 > .text-3,
-    .group-2 > .text-4,
-    .group-2 > .text-5,
-    .group-2 > .text-6 {
-        margin-bottom: 15px;
-    }
+    /*.group-1 > .text-1,*/
+    /*.group-1 > .text-2,*/
+    /*.group-1 > .text-3,*/
+    /*.group-2 > .text-4,*/
+    /*.group-2 > .text-5,*/
+    /*.group-2 > .text-6 {*/
+    /*    margin-bottom: 15px;*/
+    /*}*/
     .text-1 > p,
     .text-2 > p,
     .text-3 > p,
@@ -667,7 +673,6 @@ a:hover {
         color: #ffffff;
         text-align: center;
         width: 70%;
-        margin-bottom: 50px;
     }
 }
 /*ноутбук*/
@@ -676,8 +681,7 @@ a:hover {
         align-items: center;
         margin: 80px 0;
         width: 100%;
-        font-weight: 400;
-        font-size: 18px;
+        font-size: 14px;
     }
 
     .container2 > p {
@@ -699,14 +703,6 @@ a:hover {
         gap: 10px;
     }
 
-    .group-1 > .text-1,
-    .group-1 > .text-2,
-    .group-1 > .text-3,
-    .group-2 > .text-4,
-    .group-2 > .text-5,
-    .group-2 > .text-6 {
-        margin-bottom: 15px;
-    }
     .container2 > .icon-servise {
         min-width: 24%;
         height: 315px;
@@ -739,6 +735,8 @@ a:hover {
     display: flex;
     flex-wrap: wrap;
     max-width: 65%;
+    gap: 10px;
+    align-items: center;
 
 }
 
@@ -746,7 +744,6 @@ a:hover {
     display: flex;
     align-items: center;
     gap: 10px;
-    margin-bottom: 10px;
 }
 
 .model-content > .column-1 {
@@ -787,24 +784,22 @@ a:hover {
     }
     .model-content {
         min-width: 100%;
+        gap: 15px;
     }
     .interaction-model p {
         flex-direction: column;
         width: 100%;
-        margin-bottom: 15px;
     }
     .model-content > .column-1 {
         flex-direction: row;
         width: 100%;
-        gap: 3%;
     }
     .model-content > .column-2 {
         flex-direction: row;
         width: 100%;
-        gap: 3%;
     }
     .model-content > p::before {
-        flex-direction: row;
+        /*flex-direction: row;*/
         justify-content: space-evenly;
         min-width: 8px;
         height: 8px;
@@ -815,15 +810,16 @@ a:hover {
     .interaction-model {
         flex-direction: column;
         justify-content: center;
-        margin: 70px 0;
+        margin: 50px 0;
         width: 100%;
         font-size: 16px;
+        gap: 15px;
     }
     .model-img {
         min-width: 230px;
         margin-right: auto;
         margin-left: 0;
-        margin-bottom: 50px;
+        margin-bottom: 30px;
     }
     .model-content {
         min-width: 100%;
@@ -831,15 +827,14 @@ a:hover {
     .interaction-model p {
         flex-direction: row;
         width: 100%;
-        margin-bottom: 20px;
     }
     .model-content > .column-1 {
-        width: 40%;
-        gap: 3%;
+        width: 37%;
+        gap: 15px;
     }
     .model-content > .column-2 {
         width: 60%;
-        gap: 3%;
+        gap: 15px;
     }
     .model-content > p::before {
         flex-direction: row;
@@ -849,10 +844,11 @@ a:hover {
     }
 }
 /*ноутбук*/
-@media only screen and (970px < width < 1200px) {
+@media only screen and (970px < width < 1200px)  {
     .interaction-model {
         margin: 80px 0;
         width: 100%;
+        font-size: 16px;
     }
 
     .model-img {
@@ -864,7 +860,7 @@ a:hover {
 
     }
     .model-content > .column-1 {
-        width: 36%;
+        width: 37%;
         gap: 2%;
     }
 
@@ -1230,30 +1226,30 @@ a:hover {
         display: flex;
         justify-content: center;
         flex-direction: column;
-        width: 100%;
+        width: 290px;
         font-weight: 400;
         font-size: 12px;
         text-align: center;
-        margin: 50px 0;
+        margin: 50px auto;
     }
 
     .rocket-mobile {
         content: "";
         display: block;
-        width: 66%;
+        width: 191px;
         height: 173px;
         background: url("images/rocket/01_mobile.png") no-repeat left;
         background-size: contain;
     }
 
     .right-item {
-        padding: 15px;
+        padding: 15px 0 15px 15px;
         background: url("images/rocket/01-vertical.png") no-repeat 0 100%;
         background-size: contain;
     }
 
     .left-item {
-        padding: 15px 25px 15px 15px;
+        padding: 15px 25px 15px 0;
         background: url("images/rocket/01-vertical.png") no-repeat 100% 0,
         url("images/rocket/02-horizontal.png") no-repeat 100% 0,
         url("images/rocket/02-horizontal.png") no-repeat 100% 100%;
@@ -1262,8 +1258,12 @@ a:hover {
 
     .right-item > p,
     .left-item > p {
+        display: flex;
+        justify-content: space-evenly;
+        text-align: center;
+        vertical-align: middle;
         width: 100%;
-        margin-bottom: 15px;
+        margin: 0 auto 15px;
     }
 
     .right-item--content_1,
@@ -1272,12 +1272,13 @@ a:hover {
     .left-item--content_2,
     .right-item--content_3 {
         flex-direction: column;
-        width: 95%;
+        width: 255px;
         font-size: 10px;
         text-align: center;
         border: 1px solid #ffffff;
         position: relative;
-        background-color: #20303D;
+        background-color: #15212D;
+        margin: 0 auto;
     }
 
     .right-item--content_1 > p,
@@ -1285,21 +1286,29 @@ a:hover {
     .right-item--content_2 > p,
     .left-item--content_2 > p,
     .right-item--content_3 > p {
-        width: 92%;
-        margin-bottom: 5px;
+        display: flex;
+        justify-content: space-evenly;
+        margin: 0 auto;
+        text-align: center;
+        width: 260px;
+        gap: 5px;
     }
 
     .right-item--content_1,
     .right-item--content_2,
     .right-item--content_3 {
+        display: flex;
         padding: 10px;
         gap: 8px;
+        margin-left: auto;
     }
 
     .left-item--content_1,
     .left-item--content_2 {
+        display: flex;
         padding: 10px;
         gap: 8px;
+        margin-right: 30px;
     }
 
     .left-item--content_1::after,
@@ -1307,12 +1316,12 @@ a:hover {
         content: "";
         display: block;
         position: absolute;
-        width: 12px;
-        height: 12px;
+        width: 11px;
+        height: 11px;
         border-left: 1px solid #ffffff;
         border-top: 1px solid #ffffff;
         rotate: 135deg;
-        background-color: #20303D;
+        background-color: #15212D;
         right: -7px;
     }
     .left-item--content_1::after {
@@ -1328,12 +1337,12 @@ a:hover {
         content: "";
         display: block;
         position: absolute;
-        width: 12px;
-        height: 12px;
+        width: 11px;
+        height: 11px;
         border-left: 1px solid #ffffff;
         border-top: 1px solid #ffffff;
         rotate: -45deg;
-        background-color: #20303D;
+        background-color: #15212D;
         left: -7px;
     }
     .right-item--content_1::before {
@@ -1365,7 +1374,6 @@ a:hover {
         align-items: center;
         gap: 8px;
         margin: 0 auto;
-        width: 100%;
     }
 
     .right-item--back {
@@ -1377,7 +1385,7 @@ a:hover {
         width: 226px;
     }
     .right-item--smart-contracts {
-        width: 194px;
+        width: 239px;
     }
     .left-item--store-data {
         width: 179px;
@@ -1559,6 +1567,7 @@ a:hover {
     .column-3--item__content2,
     .column-3--item__content3 {
         padding: 15px;
+        margin: 0;
     }
 
     .column-1--item__content1::after,
@@ -1602,7 +1611,7 @@ a:hover {
     .column-3--smart-contracts,
     .column-3--structure {
         gap: 5px;
-        margin: 0;
+        margin: 0 auto;
     }
     .column-3--back {
         display: flex;
@@ -1820,6 +1829,7 @@ a:hover {
 
     .column-3--back > .column-3--back-icon2 {
         height: 24px;
+        width: 151px;
     }
 
     .column-3--back > .column-3--back-icon3 {
@@ -1832,10 +1842,12 @@ a:hover {
 
     .column-3--back > .column-3--back-icon5 {
         height: 36px;
+        width: 151px;
     }
 
     .column-3--back > .column-3--back-icon6 {
         height: 32px;
+        width: 121px;
     }
 
     .column-3--back > .column-3--back-icon7 {
